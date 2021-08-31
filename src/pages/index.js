@@ -6,8 +6,9 @@ import { StaticImage } from "gatsby-plugin-image";
 const Homepage = ({pageHeading}) => {
   return (
     <>
-      <Layout pageHeading="kanovii's home😔"> home bro
-      <StaticImage src="../images/main.jpg" loading="eager"></StaticImage>
+      <Layout pageHeading="kanovii's home😔">
+        <p>hi i'm kanovii</p>
+        <StaticImage src="../images/main.jpg" loading="eager"></StaticImage>
 
       </Layout>
     </>
