@@ -1,17 +1,17 @@
 import { Link, graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../../components/layout";
-
+import {navLinkText} from "../../components/layout.module.css"
 
 const BlogPage = ({ data }) => {
     console.log(data)
     return (
-        <Layout pageHeading="kanoviis's blog">
+        <Layout pageHeading="🧙🏻 kanoviis's blog">
             {data.allMdx.nodes.map((node) =>{
                 return (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/blog/${node.slug}`}>
+                            <Link className={navLinkText} to={`/blog/${node.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>

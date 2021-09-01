@@ -15,6 +15,7 @@ const BlogPost = ({ data }) => {
             <div className={wrapStyles.wrap}>
                 <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
             </div>
+            <span className={wrapStyles.rebeccapurple}># &Kappa;</span>
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>            
