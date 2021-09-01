@@ -3,6 +3,10 @@
     overflow: hidden;
     animation: 2.2s pulse infinite ease-out;
     margin-bottom: 20px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
 }
 
 @keyframes pulse {
