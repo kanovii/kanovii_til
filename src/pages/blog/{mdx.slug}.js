@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as wrapStyles from "../../css/blog.module.css"
 
 const BlogPost = ({ data }) => {
     const image = getImage(data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData)
@@ -11,7 +12,9 @@ const BlogPost = ({ data }) => {
     return(
         <Layout pageHeading={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>
-            <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
+            <div className={wrapStyles.wrap}>
+                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
+            </div>
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>            

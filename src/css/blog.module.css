@@ -1,0 +1,14 @@
+.wrap {
+    border-radius: 30px;
+    overflow: hidden;
+    animation: 2.2s pulse infinite ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0.8px rgba(123, 24, 252, 0.8);
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(123, 24, 252, 0.1);
+    }
+}
