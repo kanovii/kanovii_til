@@ -1,9 +1,9 @@
 import * as React from "react"
-import { footer } from "./layout.module.css"
+import { footer, footerText } from "./layout.module.css"
 const Footer = () => {
     return (
         <div className={footer}>
-            <h2># &Kappa;</h2>
+            <h2 className={footerText}># 🧙🏻</h2>
         </div>
     )
 }

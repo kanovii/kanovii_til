@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    box-sizing: border-box;
+}
+article {
+    box-sizing: border-box;
 }
 
 .container {
@@ -34,17 +38,25 @@ body {
     font-size: 20px;
     text-decoration: none;    
     transition: all 2.2s ease-out;
-    display: block;
+    display: inline-block;
 }
 .nav-link-text:hover {
-    /* background-image: linear-gradient(135deg, #4568dc,#b06ab3); */
     background-image: linear-gradient(135deg, #4f45dc,#ec700b);
     -webkit-background-clip: text;
+    -webkit-transform: translate3d(0,0,0);
     -webkit-text-fill-color: transparent;
     transition: all 2.2s ease-out;
 }
-
-
+.blog-box {
+    transition: 0.2s all ease-out;
+    height: 100%;
+}
+.blog-box:hover {
+    transform: translateX(15px);
+    padding-left: 5px;
+    /* border-left: 3px solid rebeccapurple; */
+    box-shadow: -10px 0 rebeccapurple;
+}
 
 
 
@@ -52,15 +64,33 @@ body {
 .footer {
     width: 100vw;
     height: 150px;
-    background-color: rebeccapurple;
+    background-color: rgb(121, 83, 158);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     margin-top: 70px;
-    border-top: 1px solid rebeccapurple;
-
-    background-image: linear-gradient(135deg, #4f45dc,#ec700b);
+}
+.footer-text {
+    /* background-image: linear-gradient(135deg, rebeccapurple,#ec700b); */
     -webkit-background-clip: text;
+    -webkit-transform: translate3d(0,0,0);
     -webkit-text-fill-color: transparent;
+    animation: 3s footer-text infinite ;
+    transition: ease-out;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+@keyframes footer-text {
+    0%{
+        background-color: rgb(121, 83, 158);
+
+    }
+    90%{
+        background-color: rebeccapurple;
+        box-shadow: 0 0 30px 20px rebeccapurple;
+    }
+    100%{
+        background-color: rebeccapurple;
+    }
 }

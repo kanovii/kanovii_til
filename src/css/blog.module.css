@@ -2,7 +2,7 @@
     border-radius: 30px;
     overflow: hidden;
     animation: 2.2s pulse infinite ease-out;
-    margin-bottom: 20px;
+    margin: 30px 5%;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0,0,0);
@@ -27,5 +27,7 @@
 .rebeccapurple:hover {
     background-image: linear-gradient(135deg, #4568dc,#b06ab3);
     -webkit-background-clip: text;
+    -webkit-transform: translate3d(0,0,0);
     -webkit-text-fill-color: transparent;
+    
 }

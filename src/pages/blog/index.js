@@ -1,7 +1,7 @@
 import { Link, graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../../components/layout";
-import {navLinkText} from "../../components/layout.module.css"
+import {navLinkText, blogBox} from "../../components/layout.module.css"
 
 const BlogPage = ({ data }) => {
     console.log(data)
@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
         <Layout pageHeading="🧙🏻 kanoviis's blog">
             {data.allMdx.nodes.map((node) =>{
                 return (
-                    <article key={node.id}>
+                    <article class={blogBox} key={node.id}>
                         <h2>
                             <Link className={navLinkText} to={`/blog/${node.slug}`}>
                                 {node.frontmatter.title}
