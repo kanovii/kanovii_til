@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "kanovii_til",
+    title: "kanovii",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -26,5 +26,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: `${__dirname}/blog`,
+      },
+      __key: "blog",
+    },
+    "gatsby-plugin-mdx",
   ],
 };

@@ -8,8 +8,7 @@ const Homepage = ({pageHeading}) => {
     <>
       <Layout pageHeading="kanovii's home😔">
         <p>hi i'm kanovii</p>
-        <StaticImage src="../images/main.jpg" loading="eager"></StaticImage>
-
+        <StaticImage src="../images/main.jpg" loading="eager" alt="kanovii"></StaticImage>
       </Layout>
     </>
   )
