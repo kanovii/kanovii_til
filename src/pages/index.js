@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import * as wrapStyles from "../css/blog.module.css"
+import { wrap } from "../css/blog.module.css"
 
 
 const Homepage = ({pageHeading}) => {
@@ -9,7 +9,7 @@ const Homepage = ({pageHeading}) => {
     <>
       <Layout pageHeading="👾 kanovii's home">
         <p>#럭키관호</p>
-        <StaticImage className={wrapStyles.wrap} src="../images/main.jpg" loading="eager" alt="kanovii"></StaticImage>
+        <StaticImage className={wrap} src="../images/main.jpg" loading="eager" alt="kanovii"></StaticImage>
       </Layout>
     </>
   )
