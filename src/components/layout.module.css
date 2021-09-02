@@ -76,7 +76,8 @@ article {
     -webkit-background-clip: text;
     -webkit-transform: translate3d(0,0,0);
     -webkit-text-fill-color: transparent;
-    animation: 3s footer-text infinite ;
+    background-color: rebeccapurple;
+    /* animation: 3s footer-text infinite ; */
     transition: ease-out;
     border-radius: 10px;
     padding: 0 20px;

@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
         <Layout pageHeading="🧙🏻 kanoviis's blog">
             {data.allMdx.nodes.map((node) =>{
                 return (
-                    <article class={blogBox} key={node.id}>
+                    <article className={blogBox} key={node.id}>
                         <h2>
                             <Link className={navLinkText} to={`/blog/${node.slug}`}>
                                 {node.frontmatter.title}

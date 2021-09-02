@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
             <div className={wrapStyles.wrap}>
                 <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
             </div>
-            <span className={wrapStyles.rebeccapurple}># &Kappa;</span>
+            <span className={wrapStyles.rebeccapurple}># 🧙🏻</span>
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>            
@@ -39,6 +39,5 @@ export const query = graphql`
             body
         }
     }
-
 `
 export default BlogPost
