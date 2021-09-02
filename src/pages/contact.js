@@ -3,7 +3,9 @@ import Layout from "../components/layout";
 
 const Contact = () => {
     return (
-        <Layout pageHeading="🧙🏻 kanoviis's contact">hi brp</Layout>
+        <Layout pageHeading="🧙🏻 kanoviis's contact">
+            <p>🍆 kkh0510ks@daum.net</p>
+        </Layout>
     )
 }
 
