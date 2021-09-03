@@ -14,10 +14,12 @@ const BlogPost = ({ data }) => {
     return(
         <Layout pageHeading={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>
-            <div className={wrapStyles.wrap}>
-                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
-            </div>
-            <span className={wrapStyles.rebeccapurple}># 🧙🏻</span>
+            <div className={wrapStyles.wrapTop}>
+                <div className={wrapStyles.wrap}>
+                    <GatsbyImage className={wrapStyles.postimg} image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
+                </div>
+            </div> 
+            <span className={wrapStyles.rebeccapurple}># 🍆</span>
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>            

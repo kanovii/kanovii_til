@@ -6,7 +6,7 @@ import '../css/calendar.css';
 const AboutPage = ({pageHeading}) => {
   const [value,onChange] = React.useState(new Date())
   return (
-    <Layout pageHeading="🧙🏻 kanovii's about">
+    <Layout pageHeading="👾 kanovii's about">
       <Calendar onChange={onChange} value={value} />
       <p>🍆 공부하고 기록하는 고관호입니다.</p>
       <p>🍆 가지는 화로에 구운 가지를 좋아합니다.</p>

@@ -1,15 +1,33 @@
 img{
     width: 100%;
-
     padding: 5% 20px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
-
+.postimg{
+    animation: hero 1s forwards ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes hero {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 170px;
+    }
+}
+.wrap-top {
+    text-align: center;
+}
 .wrap {
     border-radius: 30px;
     overflow: hidden;
+    display: inline-block;
     animation: 2.2s pulse infinite ease-out;
+    animation-delay: 3s;
+    transition: 1s all;
     margin: 30px 5%;
+    text-align: center;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0,0,0);
@@ -26,15 +44,21 @@ img{
 }
 
 .rebeccapurple {
-    color:rebeccapurple;
+    color: white;
     font-weight: 800;
     font-size: 30px;
-    transition: 0.2s ease-out;
+    display: block;
+    background-image: linear-gradient(135deg, #4f45dc,#ec700b);
+    transition: 2s ease-out;
+    padding-left: 3%;
+    padding-bottom: 5px;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px #888;
 }
 .rebeccapurple:hover {
-    background-image: linear-gradient(135deg, #4568dc,#b06ab3);
-    -webkit-background-clip: text;
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-text-fill-color: transparent;
+    /* background-image: linear-gradient(135deg, #4568dc,#b06ab3); */
+    padding-left: 70%;
+
     
 }
