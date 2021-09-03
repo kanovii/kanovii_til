@@ -1,7 +1,8 @@
 img{
     width: 100%;
 
-    margin: 5% 20px;
+    padding: 5% 20px;
+    box-sizing: border-box;
 }
 
 .wrap {
