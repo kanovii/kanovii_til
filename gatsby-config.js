@@ -35,6 +35,20 @@ module.exports = {
       },
       __key: "blog",
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "cobalt",
+            },
+          },
+        ],
+      },
+    },
   ],
 };

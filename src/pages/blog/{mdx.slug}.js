@@ -4,11 +4,13 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as wrapStyles from "../../css/blog.module.css"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 
 const BlogPost = ({ data }) => {
     const image = getImage(data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData)
     console.log(image)
     console.log(data)
+    deckDeckGoHighlightElement();
     return(
         <Layout pageHeading={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>

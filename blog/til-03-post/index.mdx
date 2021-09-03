@@ -1,0 +1,84 @@
+---
+title: TIL 003
+date: 2021-09-05
+hero_image: "./KakaoTalk_20210822_161503476.jpg"
+hero_image_alt: "my pic"
+hero_image_credit_text: "kanovii"
+---
+
+## TIL 003 🔥  
+  
+### 🍆 *오늘 한 일*
+- 노마드 코더 Graphql강의를 들었다.
+- over-fetching, under-fetching 자료 찾아서 정리했다.
+ * * *
+#  
+
+# 🤔 Graphql 공부에 들어가기 앞서 알아야 할 개념
+#  
+* * *  
+#  
+
+Graphql을 처음 쓰고 알아 갈 때, 왜 Graphql을 사용하는지 알아햐 한다.
+바로 그 개념이 over-fetching과 under-fetching이다.
+  
+
+- 🚧 over-fetching
+- 🚧 under-fetching
+
+# 🤔 Over-fetching
+#  
+* * *  
+#  
+  
+over-fetching은 API를 호출 할 때 필요한 것보다 더 많은 데이터를 가져오는 것이다.  
+    
+예를 들어 client에게 사용자 프로필을 보여 줘야 하는 상황에서 필요한 데이터가 사용자 사진, 이름, ID정도라고 했을 때,  
+필요하지 않은 좋아하는 음식, 학교, 구독한 채널 등을 추가적으로 가저오는 상황이 over-fetching이다.  
+#  
+```json
+
+friends : [
+    {
+        //필요한 정보
+        "id": 1
+        "profile_url": "https://kanovii.com/user/kanovii/profile.png"
+        "name": "kanovii"
+
+        //불필요한 정보
+        "Univ": "kanvoii-Univ"
+        "favorite_food": "lamb"
+        "subscripted_channel": "노마드 코더"
+    }
+]
+
+```
+#  
+
+- 🚧 불필요한 데이터를 필요한 데이터와 같이 불러옴  
+
+# 🤔 Under-fetching
+
+#  
+* * *  
+#  
+  
+Under-fetching은 하나의 endpoint로 충분한 데이터를 받지 못하는 것을 말한다.  
+이로인해 두개 이상의 API호출을 해야한다.  
+      
+이로인해 사용자 속도가 느려 질 수 있다.  
+  
+    
+- 🚧 endpoint가 다른 2개의 데이터를 불러오기 위해 API를 두번 호출해야함
+  
+#  
+  * * *
+  #  
+### 🍆 *내일 할 일*    
+- 노마드 코더 Graphql 강의 듣기  
+#  
+  * * *  
+### 🍆 *느낀점* 
+- 어렴풋이 알던 개념을 찾아서 정리했더니 간지럽게 느껴졌던 개념이 시원해졌달까..? 
+
+
