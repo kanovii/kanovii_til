@@ -22,7 +22,8 @@ const BlogPost = ({ data }) => {
             <span className={wrapStyles.rebeccapurple}># 🍆</span>
             <MDXRenderer>
                 {data.mdx.body}
-            </MDXRenderer>            
+            </MDXRenderer>    
+            <span className={wrapStyles.rebeccapurple}># 🍆</span>        
         </Layout>
     )
 }
