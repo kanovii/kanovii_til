@@ -19,8 +19,7 @@ const BlogPost = ({ data }) => {
                     <GatsbyImage className={wrapStyles.postimg} image={image} alt={data.mdx.frontmatter.hero_image_alt}/>
                 </div>
             </div> 
-            <span className={wrapStyles.rebeccapurple}># 🍆</span>
-            <MDXRenderer>
+            <MDXRenderer className={wrapStyles.bodyBox}>
                 {data.mdx.body}
             </MDXRenderer>    
             <span className={wrapStyles.rebeccapurple}># 🍆</span>        

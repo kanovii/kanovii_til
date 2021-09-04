@@ -3,6 +3,7 @@ img{
     padding: 5% 20px;
     box-sizing: border-box;
     margin: 0 auto;
+    border-radius: 30px;
 }
 .postimg{
     animation: hero 1s forwards ease-in-out;
@@ -32,6 +33,13 @@ img{
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
+}
+.body-box {
+    display: block;
+}
+
+main div > h2 {
+    background: linear-gradient(  #fff 70%, #fde04e 30% );
 }
 
 @keyframes pulse {
