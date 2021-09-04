@@ -13,6 +13,16 @@ const Layout = ({pageHeading, children}) => {
         }
       }
     `);
+    // const [head, setHead] = React.useState(false);
+    React.useEffect(() =>{
+        let head = document.getElementById("head");
+        if (pageHeading ==="👾 kanovii's TIL") {
+        head.style.background = "linear-gradient(  #fff 70%, #fde04e 30% )"
+        head.style.backgroundPosition = "bottom"
+        }
+        console.log("hi")
+    })
+    
     return(
         <>
         <div className={container}>
@@ -27,7 +37,7 @@ const Layout = ({pageHeading, children}) => {
                     <li className={navLinkItem}><Link to="/blog" className={navLinkText}>#TIL</Link></li>
                 </ul>  
                 <main>
-                    <h1 className={heading}>{pageHeading}</h1>
+                    <h1 id="head" className={heading}>{pageHeading}</h1>
                     <div>
                         
                         {children}

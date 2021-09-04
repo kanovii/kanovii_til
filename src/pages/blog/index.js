@@ -6,7 +6,7 @@ import {navLinkText, blogBox} from "../../components/layout.module.css"
 const BlogPage = ({ data }) => {
     console.log(data)
     return (
-        <Layout pageHeading="👾 kanoviis's blog">
+        <Layout pageHeading="👾 kanovii's TIL">
             {data.allMdx.nodes.map((node) =>{
                 return (
                     <article className={blogBox} key={node.id}>

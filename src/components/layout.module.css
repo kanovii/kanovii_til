@@ -5,6 +5,9 @@ body {
 article {
     box-sizing: border-box;
 }
+main {
+    width: 100%;
+}
 
 .container {
     margin: auto;
@@ -17,6 +20,7 @@ article {
 .heading {
     color: rebeccapurple;
     font-size: 45px;
+    margin: 30px auto;
 
 }
 .nav-links {
@@ -33,7 +37,9 @@ article {
 .nav-link-item:last-child {
     padding-right: 0;
 }
-
+li .nav-link-text {
+    padding: 0;
+}
 .nav-link-text {
     color:rebeccapurple;
     font-weight: 800;
