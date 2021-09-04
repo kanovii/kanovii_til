@@ -16,6 +16,8 @@ article {
 }
 .heading {
     color: rebeccapurple;
+    font-size: 45px;
+
 }
 .nav-links {
     display: flex;
@@ -35,10 +37,13 @@ article {
 .nav-link-text {
     color:rebeccapurple;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;    
     transition: all 2.2s ease-out;
-    display: inline-block;
+    display: block;
+    padding-bottom: 40px;
+    margin: 0;
+
 }
 .nav-link-text:hover {
     background-image: linear-gradient(135deg, #4f45dc,#ec700b);
@@ -50,6 +55,8 @@ article {
 .blog-box {
     transition: 0.2s all ease-out;
     height: 100%;
+    position: relative;
+    margin-bottom: 30px;
 }
 .blog-box:hover {
     transform: translateX(15px);
@@ -57,7 +64,18 @@ article {
     /* border-left: 3px solid rebeccapurple; */
     box-shadow: -10px 0 rebeccapurple;
 }
-
+.blog-box h2 {
+    margin: 0;
+}
+.blog-box p {
+    display: block;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    font-size: 14px;
+    color: #888;
+    font-weight: 700;
+}
 
 
 
@@ -93,5 +111,16 @@ article {
     }
     100%{
         background-color: rebeccapurple;
+    }
+}
+
+@media all and ( max-width: 1024px ) {
+    .heading {
+        font-size: 40px;
+    }
+}
+@media all and ( max-width: 768px ) {
+    .heading {
+        font-size: 35px;
     }
 }
