@@ -25,7 +25,7 @@ img{
     overflow: hidden;
     display: inline-block;
     animation: 2.2s pulse infinite ease-out;
-    animation-delay: 3s;
+    /* animation-delay: 3s; */
     transition: 1s all;
     margin: 30px 5%;
     text-align: center;
