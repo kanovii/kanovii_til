@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../../components/layout"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as wrapStyles from "../../css/blog.module.css"
@@ -22,7 +22,8 @@ const BlogPost = ({ data }) => {
             <MDXRenderer className={wrapStyles.bodyBox}>
                 {data.mdx.body}
             </MDXRenderer>    
-            <span className={wrapStyles.rebeccapurple}># 🍆</span>        
+            <span className={wrapStyles.rebeccapurple}># 🍆</span>      
+            <Link className={wrapStyles.backLink} to="/blog">TIL 목록으로 돌아가기 =></Link>  
         </Layout>
     )
 }

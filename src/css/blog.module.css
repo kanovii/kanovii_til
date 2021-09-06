@@ -70,9 +70,30 @@ main div > h2 {
 
     
 }
+.backLink {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 20px 0;
+    color: rebeccapurple;
+    font-weight: 700;
+    font-size: 30px;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+.backLink:hover {
+    background-color: rebeccapurple;
+    color: white;
+}
 @media all and ( max-width: 1024px ) {
-    
+    .backLink {
+        font-size: 25px;
+    }
 }
 @media all and ( max-width: 768px ) {
-    
+    .backLink {
+        font-size: 20px;
+    }
 }
