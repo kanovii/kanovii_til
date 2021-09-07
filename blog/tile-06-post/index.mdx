@@ -1,31 +1,35 @@
 ---
-title: TIL 005
-date: 2021-09-07
+title: TIL 006
+date: 2021-09-08
 hero_image: "./KakaoTalk_20210822_161503476.jpg"
 hero_image_alt: "my pic"
 hero_image_credit_text: "kanovii"
 ---
 
-## TIL 005 🔥  
+## TIL 006 🔥  
   
 ### 🍆 *오늘 한 일*
 - Graphql-yoga 서버 만들기(TS) 中
-- resorvers에 대한 정리
-- Babel 사용하기 싫어서 TS를 활용해 만들었다. 이것저것 패키지에서 다운 받는 것 보다 편하니까..!
+- mutation 에 대한 정리
  * * *
 #  
 
-# 🤔 Resolvers
+# 🤔 Mutation
 
-Graphql에서 데이터를 가져오는 구체적인 과정을 직접 구현해야 하는데 이는 Resolver가 담당한다.  
+Graphql에서 데이터를 가져오는(fetching)부분 말고 대부분은 Mutation 타입의 필드가 담당한다.
+Mutation은 기본적으로 Query와 동일하게 객체 타입이고 필드를 가지며 동일한 방식으로 작동한다. 
 
-Schema가 데이터를 설명하는 담당 이라고 한다면 Resolver는 데이터를 가저오는 방법을 구현하는 담당이다.
+
 ```javascript
-// 리솔버
+// TS
 const resolvers = {
   Query: {
-    people: () => people, // 자자 people 가져오자!!
-    person: (_: any, { id }: any) => getById(id), // 자자 people 아이디로 걸러 가져오자!
+    movies: () => movies, // fetch
+    movie: (_: any, { id }: any) => getById(id), // filter
+  },
+  Mutation: {
+    addMovie: (_: any, { title, score }: any) => addMovie(title, score), //추가
+    deleteMovie: (_: any, { id }: any) => deleteMovie(id) //삭제
   }
 }
 
@@ -34,19 +38,25 @@ const resolvers = {
 
 ```
 //스키마
-type Person {
-  id: String! // person 데이터 구조 설명
-  name: String! // !는 repuire 
-  age: Int!  
+type movies {
+  id: Int! // person 데이터 구조 설명
+  title: String! // !는 repuire 
+  score: Int!  
 }
 
 type Query {
-  people: [Person]! // [person]은 people 배열
-  person(id: Int!): Person // filter로 걸러 가져오기 
+  movies: [Movie]! // [Movie]는 movies 배열
+  Movie(id: Int!): Movie // filter로 걸러 가져오기 
 }
+
+type Mutation {
+  addMovie(title: String!, score: Int!): Movie! //제목과 점수
+  deleteMovie(id: Int!): Boolean! // 삭제 되면 true 출력
+}
+
 ```
 
-- 🚧 Resolver가 데이터를 어떻게 가져올지 구현하는 담당
+- 🚧 Mutation은 GET 이외의 요청을 대부분 수행
 
 #  
 * * *  
@@ -54,9 +64,8 @@ type Query {
 #  
 ### 🍆 *내일 할 일*    
 - 노마드 코더 Graphql 강의 듣기  
-- Graphql-yoga 서버 만들기(TS)
-- mutation 공부
+- REST API를 Graphql로 감싸기  
 #  
   * * *  
 ### 🍆 *느낀점* 
-- 바벨 싫어.. 빈센조 도와줘 !
+- 데이터 베이스 생각보다 재밌다.
