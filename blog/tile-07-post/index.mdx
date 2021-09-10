@@ -17,14 +17,32 @@ hero_image_credit_text: "kanovii"
 
 # 🤔 Node-fetch
 
-node.js 에서 fetch 할 때 Node-fetch가 필요하다 
+node.js 에서 fetch 할 때 Node-fetch 또는 Axios가 필요하다.
+Axios가 좀 더 기능이 많다. 둘 다 promise 기반이다.
 
 
 
-- 🚧 ts는 다른게 필요한가...?
+- 🚧 둘다 Promise기반이다. 
 
 #  
 * * *  
+```
+export const getMovies = async ( rating: any, limit: any) => {
+  const {
+    data: {
+      data: { movies }
+    }
+  } = await axios.get(API_URL, {
+    params: {
+      limit,
+      minimum_rating: rating
+    }
+  });
+  return movies
+}
+```
+#  
+* * * 
 
 #  
 ### 🍆 *내일 할 일*    
