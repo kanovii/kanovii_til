@@ -1,0 +1,77 @@
+---
+title: TIL 010
+date: 2021-09-12
+hero_image: "./KakaoTalk_20210822_161503476.jpg"
+hero_image_alt: "my pic"
+hero_image_credit_text: "kanovii"
+---
+
+## TIL 010 🔥  
+  
+### 🍆 *오늘 한 일*
+- 노마드 Graphql part2 강의
+- Query 작성
+ * * *
+#  
+
+# 🤔 Query 작성하기 (detail page)🧑🏻‍💻
+
+detail page를 위해서는 선택한 영화에 대한 아이디를 가져와야한다
+  
+#### 🧑🏻‍💻 query 
+  
+```
+const movieQueryy = gql`
+    query movieQuery($id: Int!) {
+        movie(id: $id) {
+            id
+            rating
+            title
+            medium_cover_image
+        }
+    }
+`
+
+```  
+  
+그리고 useParams를 사용해서 id를가져온다
+
+useQuery에는 쿼리에 넣을 id(useParams로 가져온id)를 변수로 지정해 준다
+```
+const Detail = () => {
+    const { id } = useParams()
+    const {loading, error, data } = useQuery(movieQueryy, {
+        variables: { id: +id } // 변수 지정
+    });
+    console.log(loading, error, data)
+    return (
+        <div>
+            {loading ? 
+                <div>loading...</div>
+                :
+                <>
+                    <div>{id}</div>
+                    <img src={data.movie.medium_cover_image} />
+                    <div>{data.movie.title}</div> 
+                </>  
+            }
+        </div>
+    )
+}
+```
+- 🚧 useParams로 id 가져오기
+
+- 🚧 useQuery에 variables: {id: +id}로 변수 지정해주기 (+id는 String을 Int로 바꾸기 위해)
+
+
+#  
+* * * 
+
+#  
+### 🍆 *내일 할 일*    
+- 노마드 코더 Graphql part2 강의 듣기  
+- 스타일 지정하기
+#  
+  * * *  
+### 🍆 *느낀점* 
+- 쿼리 반복 학습 ....!
