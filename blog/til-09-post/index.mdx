@@ -1,0 +1,74 @@
+---
+title: TIL 009
+date: 2021-09-11
+hero_image: "./KakaoTalk_20210822_161503476.jpg"
+hero_image_alt: "my pic"
+hero_image_credit_text: "kanovii"
+---
+
+## TIL 009 🔥  
+  
+### 🍆 *오늘 한 일*
+- 노마드 Graphql part2 강의
+- Query 작성
+ * * *
+#  
+
+# 🤔 Query 작성하기 🧑🏻‍💻
+
+apollo 패키지에서 gql을 import하고 쿼리는 다음과 같이 작성한다.  
+  
+#### 🧑🏻‍💻 query 
+  
+```
+import { gql} from "@apollo/client"
+
+const movieQuery = gql `
+    query {
+        movies{
+            id
+            rating
+            title
+        }    
+    }
+`
+
+```  
+  
+그리고 useQuery Hooks를 사용해서 데이터를 가져온다 
+
+useQuery도 apollo패키지에서 가저옴
+```
+const Home = () => {
+    const { loading, error, data } = useQuery(movieQuery);
+    console.log(loading, error, data)
+   if (loading) {
+       return <div>loading...</div>
+   }
+   if(data && data.movies) {
+       return (
+           data.movies.map(m => <h1>{m.title}</h1>)
+           )
+   }
+}
+```
+- 🚧 useQuery()인자 안에는 앞서 작성했던 movieQuery를 인자로 넣는다
+
+- 🚧 loading은 로딩중에 true를 반환 로딩후에는 false를 반환한다
+
+- 🚧 error는 data를 가져오면 undefined로 나타난다
+
+- 🚧 data는 앞서 작성했던 쿼리를 기반으로 data를 가져온다
+
+
+#  
+* * * 
+
+#  
+### 🍆 *내일 할 일*    
+- 노마드 코더 Graphql part2 강의 듣기  
+- Query 작성하기
+#  
+  * * *  
+### 🍆 *느낀점* 
+- 쿼리 반복 학습 !
