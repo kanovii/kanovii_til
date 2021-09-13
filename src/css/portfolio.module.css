@@ -3,13 +3,13 @@
     color: rebeccapurple;
     font-size: 45px;
     font-weight: 600;
-    margin: 30px auto;
+    margin: 30px auto 50px;
 }
 .portfolio_box {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
-    
+    margin-bottom: 50px;
 }
 .portfolio_text_box{
     max-width: 300px;

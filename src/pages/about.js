@@ -25,6 +25,14 @@ const AboutPage = ({pageHeading}) => {
           <a href="https://kanovii.github.io/apollo/#/" target="_blank">바로가기</a>
         </div>
       </div>
+      <div className={portfolio_box}>
+        <StaticImage className={portfolio_img} src="../images/movie_apollo.png" loading="eager" alt="portfolio"></StaticImage>
+        <div className={portfolio_text_box}>
+          <div>영화 정보 사이트</div>
+          <div>graphql과 apollo를 사용하여 영화 API 데이터를 가져온 리엑트 기반 페이지</div>
+          <a href="https://kanovii.github.io/apollo/#/" target="_blank">바로가기</a>
+        </div>
+      </div>
     </Layout>
   )
 }
