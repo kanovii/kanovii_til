@@ -37,3 +37,14 @@
     background: linear-gradient(  #fff 70%, #914efd 30% );
     right: 0;
 }
+
+@media all and (max-width: 1024px) {
+    .portfolio_text {
+        font-size: 40px;
+    }
+}
+@media all and (max-width: 768px) {
+    .portfolio_text {
+        font-size: 35px;
+    }
+}
