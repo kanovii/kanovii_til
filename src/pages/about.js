@@ -20,12 +20,13 @@ const AboutPage = ({pageHeading}) => {
       <p>🍆 모두에게 와닿진 안습니다.</p>
       <p>🍆 겪어보면 압니다. 죽을 문턱까지 갔을때 들었던 생각들...</p>
       <p>🍆 '그녀 앞에서 좀만 더 웃어줄껄, 애니 보면서 누워있던 그시간 네 머리냄새'</p>
-      <p>🍆 정말 사소하면서도 형통 했던 그 하나하나의 기억들</p>
+      <p>🍆 정말 사소하면서도 형통 했던 그 하나하나의 기억들이</p>
       <p>🍆 '행복한 삶이었구나 나도' 라는 생각이 들고</p>
-      <p>🍆 엄마도 이런 아름다운 추억을, 아들인 나와의 추억을 회상하면서 죽음을 맞이했었을까</p>
+      <p>🍆 엄마도 이런 아름다운 추억을, 아들인 나와의 추억을 회상하면서 죽음을 맞이 했었을까</p>
       <p>🍆 좋은 기억이었다면 어떤 기억을 떠올렸을까 처음 날 나아주신 날일까? 걷는날?</p>
       <p>🍆 살아서는 알 방법이 없다.</p>
-
+      <p>🍆 보고싶다. 다시한번 품에 안겨서 25살에 한심하게 어리광부리는 장남이 되고싶다.</p>
+      <p>🍆 </p>
       <div className={heading, portfolio_text}>kanovii's portfolio</div>
       <div className={portfolio_box}>
         <StaticImage className={portfolio_img} src="../images/movie_apollo.png" loading="eager" alt="portfolio"></StaticImage>
