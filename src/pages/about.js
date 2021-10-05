@@ -26,7 +26,9 @@ const AboutPage = ({pageHeading}) => {
       <p>🍆 좋은 기억이었다면 어떤 기억을 떠올렸을까 처음 날 나아주신 날일까? 걷는날?</p>
       <p>🍆 살아서는 알 방법이 없다.</p>
       <p>🍆 보고싶다. 다시한번 품에 안겨서 25살에 한심하게 어리광부리는 장남이 되고싶다.</p>
-      <p>🍆 </p>
+      <p>🍆 어렸을때 대화했던 엄마의 모습도 눈에 선하다 도쿄타워 밑에서 먹지 못하는 아이스크림 바라보고 만 있던 4가족들</p>
+      <p>🍆 엄마의 빈자리는 크지만 적응해서 살고 있어 하지만 가끔씩 훅 치고 들어오는 기억과 추억 막을 수 가 없네</p>
+
       <div className={heading, portfolio_text}>kanovii's portfolio</div>
       <div className={portfolio_box}>
         <StaticImage className={portfolio_img} src="../images/movie_apollo.png" loading="eager" alt="portfolio"></StaticImage>
